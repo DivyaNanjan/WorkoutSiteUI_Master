@@ -1,0 +1,22 @@
+
+<div class="container">
+    <h2>WorkOut List </h2>
+    <ul class="responsive-table" style="width:135%">
+
+      <li class="table-header" >
+        <div class="col col-1">Workout Id</div>
+        <div class="col col-1">Title</div>
+        <div class="col col-3">Calories Burnt Per Unit Time</div>
+        <div class="col col-4">Unit Time</div>
+      </li>
+      <div>
+          <button  class="btn btn-primary" (click)="redirect()" style="margin-left: 103%;margin-top: -17%;">Add</button>
+          </div>
+      <li class="table-row" *ngFor="let workout of workoutList; let i = index" (click)="WorkoutTxnredirect(i)" [class.active]="i == selectedRow" >
+        <div class="col col-1" data-label="Workout Id">{{workout[0]}}</div>
+        <div class="col col-2" data-label="Title">{{workout[1]}}</div>
+        <div class="col col-3" data-label="Calories Burnt Per Unit Time">{{workout[2]}}</div>
+        <div class="col col-4" data-label="Unit Time">{{workout[3]}}</div>
+      </li>
+    </ul>
+  </div>

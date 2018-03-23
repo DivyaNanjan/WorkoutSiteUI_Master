@@ -1,0 +1,23 @@
+
+<div class="container">
+    <h2>WorkOutTranscation List </h2>
+    <ul class="responsive-table" style="width:135%">
+      <li class="table-header">
+        <div class="col col-1">Start Time</div>
+        <div class="col col-1">Stop Time</div>
+        <div class="col col-3">Duration (secs)</div>
+        <div class="col col-4">Calories Burnt (unit time)</div>
+      </li>
+      <div class="add">
+          <button (click)="redirect()" style="margin-left: 103%;margin-top:-17%">Add</button>
+          <button (click)="backRedirect()" style="margin-left: 103%;margin-top:-17%">Back</button>
+          </div>
+      <li class="table-row"*ngFor="let workoutTxn of workoutTxnList; let i = index" >
+           
+        <div class="col col-1" data-label="Start Time">{{workoutTxn[2][0]}}-{{workoutTxn[2][1]}}-{{workoutTxn[2][2]}} {{workoutTxn[2][3]}}:{{workoutTxn[2][4]}}:00</div>
+        <div class="col col-2" data-label="Stop Time">{{workoutTxn[3][0]}}-{{workoutTxn[3][1]}}-{{workoutTxn[3][2]}} {{workoutTxn[3][3]}}:{{workoutTxn[3][4]}}:00</div>
+        <div class="col col-3" data-label="Duration">{{workoutTxn[4]}}</div>
+        <div class="col col-4" data-label="Calories Burnt">{{workoutTxn[5]}}</div>
+      </li>
+    </ul>
+  </div>
